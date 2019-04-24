@@ -4,7 +4,7 @@
 
 首先你要先裝Anaconda，到[這裡](https://docs.anaconda.com/anaconda/install/)來下載你環境的版本，我的是ubuntu16.04，以下說明都是以這個作業系統環境。
 
-##建立一個julia Flux的conda環境
+## 建立一個julia Flux的conda環境
 
 首先你要先知道你的jupyter灌在哪個路徑
 

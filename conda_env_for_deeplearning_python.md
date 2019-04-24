@@ -1,4 +1,4 @@
-# 如何建立一個python深度學習的conda環境 
+# 如何建立一個python深度學習的conda環境
 
 ## 安裝 Anaconda
 
@@ -6,7 +6,7 @@
 
 ## 建立一個機器學習的基底環境
 
-```shell
+```text
 conda create --name ml_base
 conda activate ml_base
 conda install pandas numpy scipy
@@ -18,11 +18,11 @@ conda install -c conda-forge jupyterlab
 conda deactivate
 ```
 
-##建立一個python Tensorflow的conda環境
+## 建立一個python Tensorflow的conda環境
 
-上述ml_base環境必須先建製完成
+上述ml\_base環境必須先建製完成
 
-```shell
+```text
 conda create --name tensorflow --clone ml_base
 conda activate tensorflow
 conda install -c anaconda tensorflow-gpu
@@ -30,11 +30,11 @@ python -m ipykernel install --user --name tensorflow --display-name "Python (ten
 conda deactivate
 ```
 
-## 建立一個python Keras (基於Tensorflow)的conda環境
+## 建立一個python Keras \(基於Tensorflow\)的conda環境
 
 上述tensorflow環境必須先建製完成
 
-```shell
+```text
 conda create -n keras --clone tensorflow
 conda activate keras
 conda install -c conda-forge keras
@@ -44,9 +44,9 @@ conda deactivate
 
 ## 建立一個python PyTorch的conda環境
 
-上述ml_base環境必須先建製完成
+上述ml\_base環境必須先建製完成
 
-```shell
+```text
 conda create -n pytorch --clone ml_base
 conda activate pytorch
 conda install -c pytorch pytorch 
@@ -56,7 +56,7 @@ conda deactivate
 
 ## jupyter kernel的管理
 
-```shell
+```text
 # check all your kernel
 jupyter kernelspec list
 # delete your kernel

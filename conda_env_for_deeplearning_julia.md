@@ -1,4 +1,4 @@
-# 如何建立一個julia深度學習的conda環境 
+# 如何建立一個julia深度學習的conda環境
 
 ## 安裝 Anaconda
 
@@ -8,7 +8,7 @@
 
 首先你要先知道你的jupyter灌在哪個路徑
 
-```shell
+```text
 which jupyter
 ```
 
@@ -16,7 +16,7 @@ which jupyter
 
 複製該路徑，然後
 
-```shell
+```text
 conda create -n julia_flux
 conda activate julia_flux
 conda install -c conda-forge julia
@@ -33,15 +33,15 @@ ENV["JUPYTER"]="/home/phoebehuang/anaconda3/bin/jupyter" #剛剛你複製的路�
 
 此時在Pkg模式下
 
-```shell
+```text
 add IJulia
 add Flux # install Flux, Flux是一個julia的深度學習套件
 test Flux # (Optional) for testing
 ```
 
-(Optional) 如果你的環境有gpu
+\(Optional\) 如果你的環境有gpu
 
-```shell
+```text
 add CuArrays
 add CUDAdrv
 add CUDAnative
@@ -49,28 +49,23 @@ add GPUArrays
 test CUDAnative
 ```
 
-> [ Info: Testing using device GeForce GTX 1080
->  Test Summary: | Pass  Broken  Total
->    CUDAnative    |  272       1    273
->    Testing CUDAnative tests passed
+> \[ Info: Testing using device GeForce GTX 1080 Test Summary: \| Pass Broken Total CUDAnative \| 272 1 273 Testing CUDAnative tests passed
 
 接下來按 ctrl+c 離開pkg模式，回到julia模式
 
-```shell
+```text
 exit() # 離開julia
 conda deactivate # 離開此conda環境
 ```
 
 此時
 
-- 到工作資料夾下用`jupyter notebook`命令行開啟 jupyter ，會發現多一個 julia 的 kernel
-- 或是用`jupyter kernelspec list`來檢查多出來的kernel
-
-
+* 到工作資料夾下用`jupyter notebook`命令行開啟 jupyter ，會發現多一個 julia 的 kernel
+* 或是用`jupyter kernelspec list`來檢查多出來的kernel
 
 ## jupyter kernel的管理
 
-```shell
+```text
 # check all your kernel
 jupyter kernelspec list
 # delete your kernel
